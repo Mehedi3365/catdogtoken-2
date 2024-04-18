@@ -1,0 +1,195 @@
+body {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: calc(26px/16px);
+    color: $white;
+    font-family: $font-1;
+    background-color: #050715;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-2;
+    color: $heading;
+    font-weight: 400;
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none !important;
+    @include transition;
+}
+
+input,
+textarea,
+button {
+    padding: 10px 25px;
+    border: 1px solid $border;
+    outline: none;
+    @include transition;
+    &:focus {
+        outline: none;
+        border-color: $primary;
+    }
+}
+
+
+/*Hide number spin button*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.common {
+    &-svg {
+        display: inline-block;
+        height: 1em;
+        overflow: visible;
+        vertical-align: -0.125em;
+    }
+    &-row {
+        --bs-gutter-x: 32px;
+        margin-bottom: calc(var(--bs-gutter-x) * -1);
+        @include mmd {
+            --bs-gutter-x: 24px;
+        }
+        &>div {
+            margin-bottom: var(--bs-gutter-x);
+        }
+    }
+    &-padding {
+        --padding-y: 120px;
+        --padding-x: 0;
+        padding: var(--padding-y) var(--padding-x);
+        @include xl {
+            --padding-y: 100px;
+        }
+        @include lg {
+            --padding-y: 100px;
+        }
+        @include md {
+            --padding-y: 80px;
+        }
+        @include sm {
+            --padding-y: 60px;
+        }
+        &-top {
+            padding-top: var(--padding-y);
+        }
+    }
+    &-title {
+        margin-bottom: 60px;
+        @media (min-width: 1440px) {
+            padding: 0 4%;
+        }
+        @include md {
+            margin-bottom: 40px;
+        }
+        @include sm {
+            margin-bottom: 30px;
+        }
+        & h2 {
+            @include font-68;
+        }
+        & p {
+            @include font-20;
+        }
+    }
+}
+
+.btn {
+    --bs-btn-padding-x: 20px !important;
+    --bs-btn-padding-y: 7px !important;
+    --bs-btn-color: #0D0D0C !important;
+    --bs-btn-border-width: 1px !important;
+    --bs-btn-border-color: $primary !important;
+    --bs-btn-font-size: 18px !important;
+    --bs-btn-border-radius: 100px !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    @include sm {
+        --bs-btn-font-size: 16px !important;
+        --bs-btn-line-height: 26px !important;
+    }
+    &:hover {
+        background-color: $black !important;
+        border-color: $primary !important;
+        color: $white !important;
+    }
+    &.bg-primary {
+        border-color: $primary !important;
+        color: $secondary !important;
+        &:hover {
+            background-color: $black!important;
+            color: $primary !important;
+        }
+    }
+    &.bg-transparent {
+        border-color: $primary !important;
+        color: $primary !important;
+        &:hover {
+            background-color: $primary !important;
+            color: $secondary !important;
+        }
+    }
+}
+
+.primary-btn {
+    border: 0;
+    border-radius: 50px;
+    background-color: $primary;
+    color: $white;
+    font-family: $font-2;
+    font-size: 34px;
+    line-height: 120%;
+    padding: 20px 40px;
+    display: inline-block;
+    @include transition;
+    &:hover {
+        background-color: $black !important;
+    }
+    @include xl {
+        font-size: 28px;
+        padding: 18px 36px;
+    }
+    @include lg {
+        font-size: 28px;
+        padding: 18px 36px;
+    }
+    @include mmd {
+        font-size: 28px;
+        padding: 18px 36px;
+    }
+    @include sm {
+        font-size: 20px;
+        padding: 16px 30px;
+    }
+}

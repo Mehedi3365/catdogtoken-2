@@ -1,0 +1,159 @@
+.about {
+    & .container {
+        @media only screen and (min-width: 1920px) {
+            max-width: 1650px;
+        }
+    }
+    padding-top: 242px;
+    position: relative;
+    z-index: 3;
+    @include xxl {
+        padding-top: 190px;
+    }
+    @include xl {
+        padding-top: 135px;
+    }
+    @include lg {
+        padding-top: 120px;
+    }
+    @include mmd {
+        padding-top: 70px;
+    }
+    &::after {
+        position: absolute;
+        z-index: -1;
+        top: -241px;
+        left: -151px;
+        width: 1123px;
+        height: 918px;
+        content: '';
+        background-color: #7F3EF6;
+        border-radius: 100%;
+        filter: blur(1400px);
+        --size: 600px;
+        @include xxl {
+            left: 0;
+            width: var(--size);
+            height: var(--size);
+        }
+        @include xl {
+            left: 0;
+            top: 0px;
+            width: var(--size);
+            height: var(--size);
+        }
+        @include lg {
+            left: 0;
+            top: 0;
+            width: var(--size);
+            height: var(--size);
+        }
+        @include mmd {
+            left: 0;
+            top: 0;
+            width: var(--size);
+            height: var(--size);
+        }
+        @include sm {
+            --size: 280px;
+            filter: blur(150px)
+        }
+    }
+    &::before {
+        position: absolute;
+        z-index: -1;
+        top: -40px;
+        right: -151px;
+        width: 1123px;
+        height: 918px;
+        content: '';
+        background-color: #6310FF;
+        border-radius: 100%;
+        filter: blur(1400px);
+        --size: 600px;
+        @include xxl {
+            right: 0;
+            width: var(--size);
+            height: var(--size);
+        }
+        @include xl {
+            right: 0;
+            top: 0;
+            width: var(--size);
+            height: var(--size);
+        }
+        @include lg {
+            right: 0;
+            top: 0;
+            width: var(--size);
+            height: var(--size);
+        }
+        @include mmd {
+            right: 0;
+            top: 0;
+            width: var(--size);
+            height: var(--size);
+        }
+        @include sm {
+            top: 678px;
+            --size: 280px;
+            filter: blur(150px)
+        }
+    }
+    & h1 {
+        @include font-150;
+    }
+    & .line {
+        width: 3px;
+        height: 244px;
+        margin: 0 auto;
+        background-image: linear-gradient(to bottom, #523E83, rgba(255, 255, 255, 0));
+        margin-bottom: 6px;
+        margin-top: 50px;
+        @include lg {
+            height: 212px;
+        }
+        @include mmd {
+            height: 175px;
+        }
+        @include sm {
+            margin-top: 0px;
+            height: 130px;
+        }
+    }
+    &-content {
+        padding-top: 50px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        @include lg {
+            padding-top: 36px;
+        }
+        @include mmd {
+            padding-top: 36px;
+        }
+        @include sm {
+            padding-top: 20px;
+        }
+        & p {
+            font-size: 18px;
+            line-height: 160%;
+            color: rgb(255, 255, 255, .60);
+            margin-bottom: 40px;
+            padding-right: 88px;
+            @include xxl {
+                padding-right: 10px;
+            }
+            @include xl {
+                padding-right: 10px;
+            }
+            @include lg {
+                padding-right: 0px;
+            }
+            @include mmd {
+                padding-right: 0;
+            }
+            @include ssm {
+                margin-bottom: 28px;
+            }
+        }
+    }
+}

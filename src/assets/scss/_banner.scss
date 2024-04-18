@@ -1,0 +1,370 @@
+.banner {
+    padding-top: 165px;
+    background-image: url(../img/banner-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 5;
+    @include sm {
+        padding-top: 142px;
+    }
+    & .container {
+        @media only screen and (min-width: 1920px) {
+            max-width: 1760px;
+        }
+    }
+    &-wrap {
+        width: 100%;
+        height: 1180px;
+        background-image: url(../img/banner-wrap-img.png);
+        background-repeat: no-repeat;
+        background-size: 100% 1180px;
+        background-position: center;
+        position: relative;
+        z-index: 1;
+        @include xxl {
+            height: 1020px;
+            background-size: 100% 1020px;
+        }
+        @include xl {
+            height: auto;
+            background-size: cover;
+        }
+        @include lg {
+            height: auto;
+            background-size: cover;
+        }
+        @include mmd {
+            height: auto;
+            background-size: cover;
+        }
+        &::after {
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 92px;
+            content: "";
+            background-color: rgba(56, 22, 120, 0.308);
+            @include xl {
+                border-radius: 0;
+            }
+            @include lg {
+                display: none;
+            }
+            @include mmd {
+                display: none;
+            }
+        }
+    }
+    &-img {
+        margin-top: -200px;
+        margin-left: 70px;
+        @include xxl {
+            margin-top: -112px;
+            margin-left: 50px;
+        }
+        @include xl {
+            margin-top: 30px;
+            margin-left: 0px;
+        }
+        @include lg {
+            margin-top: 30px;
+            margin-left: 0px;
+        }
+        @include mmd {
+            margin-top: 30px;
+            margin-left: 0px;
+        }
+        & img {
+            max-width: 848px;
+            @include xxl {
+                max-width: 600px;
+            }
+            @include xl {
+                max-width: none;
+                width: 100%;
+            }
+            @include lg {
+                max-width: none;
+                width: 100%;
+            }
+            @include mmd {
+                max-width: none;
+                width: 100%;
+            }
+        }
+    }
+    &-content {
+        & h1 {
+            font-size: 180px;
+            line-height: 132%;
+            margin-bottom: 0;
+            @include xxl {
+                font-size: 140px;
+            }
+            @include xl {
+                font-size: 120px;
+            }
+            @include lg {
+                font-size: 80px;
+            }
+            @include mmd {
+                font-size: 65px;
+            }
+            @include sm {
+                line-height: 92%;
+                padding-top: 10px;
+            }
+            @include ssm {
+                font-size: 50px;
+                line-height: 154%;
+            }
+        }
+        & p {
+            @include font-22;
+            margin-bottom: 42px;
+            padding: 0 218px;
+            @include xxl {
+                padding: 0 82px;
+            }
+            @include xl {
+                padding: 0 40px;
+            }
+            @include lg {
+                padding: 0 40px;
+            }
+            @include mmd {
+                padding: 0;
+            }
+        }
+    }
+    &-card {
+        width: 550px;
+        border: 7px solid rgba(116, 42, 251, 0.7);
+        border-radius: 32px;
+        padding: 24px 58px;
+        background-color: rgba(15, 5, 73, 0.8);
+        margin-top: -190px;
+        margin-right: 80px;
+        @include xxl {
+            width: 490px;
+            padding: 24px 30px;
+            margin-right: 18px;
+            margin-top: -155px;
+        }
+        @include xl {
+            width: 490px;
+            padding: 24px 30px;
+            margin-right: 0px;
+            margin-top: 40px;
+        }
+        @include lg {
+            width: 490px;
+            padding: 24px 30px;
+            margin-right: 0px;
+            margin-top: 40px;
+        }
+        @include mmd {
+            width: 490px;
+            padding: 24px 30px;
+            margin-right: 0px;
+            margin-top: 40px;
+        }
+        @include sm {
+            width: 375px;
+            border-width: 3px;
+            padding: 24px 16px;
+        }
+        @include ssm {
+            width: 350px;
+        }
+        & h2 {
+            font-size: 28px;
+            line-height: 130%;
+            margin-bottom: 24px;
+            @include sm {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+        }
+        &-date {
+            text-align: center;
+            column-gap: 30px;
+            margin-bottom: 24px;
+            @include sm {
+                column-gap: 16px;
+            }
+            &-single {
+                --size: 70px;
+                width: var(--size);
+                height: var(--size);
+                border: 1px solid #9023FA;
+                border-radius: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 0 0 auto;
+                position: relative;
+                z-index: 1;
+                & svg {
+                    position: absolute;
+                    top: 6px;
+                    left: 6px;
+                }
+                & span {
+                    font-size: 20px;
+                    line-height: calc(24px/20px);
+                    font-weight: 600;
+                }
+                & p {
+                    font-size: 8px;
+                    line-height: calc(9px/8px);
+                }
+            }
+        }
+        &-content {
+            & h3 {
+                font-size: 20px;
+                text-transform: unset;
+                line-height: 120%;
+                margin-bottom: 12px;
+            }
+            & p {
+                margin-bottom: 12px;
+                font-size: 16px;
+                line-height: 90%;
+                justify-content: center;
+                color: $white;
+                &:first-child {
+                    font-weight: 500;
+                }
+            }
+            & h4 {
+                font-size: 18px;
+                font-weight: 600;
+                font-family: $font-1;
+                line-height: 120%;
+                margin-bottom: 24px;
+                position: relative;
+                z-index: 1;
+                &::after {
+                    position: absolute;
+                    top: 10px;
+                    left: 0px;
+                    width: 103px;
+                    height: 1px;
+                    background-color: #fff;
+                    content: '';
+                    @include sm {
+                        width: 45px;
+                    }
+                }
+                &::before {
+                    position: absolute;
+                    top: 10px;
+                    right: 0px;
+                    width: 103px;
+                    height: 1px;
+                    background-color: #fff;
+                    content: '';
+                    @include sm {
+                        width: 45px;
+                    }
+                }
+            }
+        }
+        &-btn {
+            column-gap: 17px;
+            margin-bottom: 16px;
+            & .card-btn {
+                border: 1px solid $border;
+                border-radius: 8px;
+                width: 133px;
+                height: 55px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: transparent;
+                @include sm {
+                    height: 48px;
+                }
+                & img {
+                    @include sm {
+                        max-width: none;
+                        width: 20px;
+                    }
+                }
+                & span {
+                    font-size: 20px;
+                    font-weight: 600;
+                    padding-left: 8px;
+                    color: $white;
+                    @include sm {
+                        font-size: 16px;
+                    }
+                }
+                &:hover {
+                    background-color: $black;
+                }
+            }
+        }
+        &-input {
+            margin-bottom: 16px;
+            & .title {
+                margin-bottom: 16px;
+                & p {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 90%;
+                }
+            }
+            & .input-wrap {
+                position: relative;
+                z-index: 1;
+                & input {
+                    width: 100%;
+                    height: 64px;
+                    padding: 21px 24px;
+                    border: 1px solid $border;
+                    border-radius: 8px;
+                    background-color: transparent;
+                    color: $white;
+                    @include sm {
+                        height: 56px;
+                    }
+                }
+                &-btn {
+                    cursor: pointer;
+                    position: absolute;
+                    top: 50%;
+                    right: 24px;
+                    transform: translate(0, -50%);
+                }
+            }
+        }
+        & .submit-btn {
+            & p {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 90%;
+                margin-bottom: 24px;
+                & span {
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+            }
+            & .primary-btn {
+                font-size: 24px;
+                padding: 16px 0;
+                @include sm {
+                    font-size: 20px;
+                    padding: 12px 0;
+                }
+            }
+        }
+    }
+}

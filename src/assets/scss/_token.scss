@@ -1,0 +1,172 @@
+.token {
+    margin-top: 335px;
+    & .container {
+        @media only screen and (min-width: 1700px) {
+            max-width: 1650px
+        }
+    }
+    position: relative;
+    z-index: 1;
+    @include xxl {
+        padding-top: 300px;
+    }
+    @include xl {
+        padding-top: 285px;
+    }
+    @include lg {
+        padding-top: 180px;
+    }
+    @include mmd {
+        padding-top: 150px;
+    }
+    &::after {
+        position: absolute;
+        z-index: -1;
+        top: 180px;
+        right: -400px;
+        width: 1123px;
+        height: 918px;
+        content: "";
+        background-color: #6310FF;
+        border-radius: 100%;
+        filter: blur(1400px);
+        --size: 600px;
+        opacity: 0.8;
+        @include xxl {
+            right: 0;
+            width: var(--size);
+            height: var(--size);
+        }
+        @include xl {
+            right: 0;
+            top: 0px;
+            width: var(--size);
+            height: var(--size);
+        }
+        @include lg {
+            right: 0;
+            top: 0;
+            width: var(--size);
+            height: var(--size);
+        }
+        @include mmd {
+            right: 0;
+            top: 0;
+            width: var(--size);
+            height: var(--size);
+        }
+        @include sm {
+            --size: 280px;
+            filter: blur(150px)
+        }
+    }
+    &::before {
+        position: absolute;
+        z-index: -1;
+        top: -550px;
+        right: -300px;
+        content: '';
+        width: 848px;
+        height: 693px;
+        border-radius: 100%;
+        background-color: #7F3EF6;
+        filter: blur(1400px);
+        @include xxl {
+            right: 0;
+            opacity: 0.6;
+        }
+        @include xl {
+            right: 0;
+            --size: 400px;
+            width: var(--size);
+            height: var(--size);
+        }
+        @include lg {
+            right: 0;
+            // opacity: 0.8;
+            --size: 400px;
+            width: var(--size);
+            height: var(--size);
+        }
+        @include mmd {
+            right: 0;
+            --size: 400px;
+            width: var(--size);
+            height: var(--size);
+            filter: blur(350px);
+        }
+        @include sm {
+            --size: 250px;
+            filter: blur(200px);
+        }
+    }
+    &-title {
+        margin-bottom: 240px;
+        &:nth-child(1) {
+            margin-left: 140px;
+        }
+        .title2 {
+            margin-right: 99px;
+        }
+        & h2 {
+            @include font-150;
+            line-height: 84%;
+            color: $white;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+        }
+    }
+    &-img {
+        margin-top: -80px;
+        & .image {
+            width: 680px;
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        & .bg-blur {
+            // background-image: url('../img/tokenbuttonimg.png');
+            background-image: linear-gradient(to right, rgb(255, 255, 255, .002), rgb(153, 153, 153, .0020));
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            width: 708px;
+            margin-top: -53px;
+            backdrop-filter: blur(23px);
+            & p {
+                font-size: 49px;
+                line-height: 52px;
+                font-family: $font-2;
+                color: $white;
+                text-transform: uppercase;
+                padding: 48px 0;
+            }
+        }
+    }
+    &-list {
+        &:not(:last-child) {
+            margin-bottom: 50px;
+        }
+        & h4 {
+            font-size: 31px;
+            font-weight: 400;
+            line-height: 32px;
+            font-family: $font-2;
+            color: $white;
+            @include xl {
+                font-size: 25px;
+                line-height: 28px;
+                padding: 0 20px;
+            }
+        }
+        & p {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 24px;
+            font-family: $font-1;
+            color: $white;
+        }
+    }
+}

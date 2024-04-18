@@ -1,0 +1,171 @@
+.howtoworks {
+    padding-top: 190px;
+    padding-bottom: 150px;
+    & .container {
+        @media only screen and (min-width: 1700px) {
+            max-width: 1650px;
+        }
+    }
+    position: relative;
+    z-index: 2;
+    @include xxl {
+        padding-top: 170px;
+    }
+    @include xl {
+        padding-top: 135px;
+    }
+    @include lg {
+        padding-top: 120px;
+    }
+    @include mmd {
+        padding-top: 70px;
+    }
+    &::after {
+        position: absolute;
+        z-index: -1;
+        top: 0px;
+        left: -266px;
+        width: 1123px;
+        height: 918px;
+        content: "";
+        background-color: #6310FF;
+        border-radius: 100%;
+        filter: blur(1400px);
+        --size: 600px;
+        opacity: 0.8;
+        @include xxl {
+            left: 0;
+            width: var(--size);
+            height: var(--size);
+        }
+        @include xl {
+            left: 0;
+            top: 0px;
+            width: var(--size);
+            height: var(--size);
+        }
+        @include lg {
+            left: 0;
+            top: 0;
+            width: var(--size);
+            height: var(--size);
+        }
+        @include mmd {
+            left: 0;
+            top: 0;
+            width: var(--size);
+            height: var(--size);
+        }
+        @include sm {
+            --size: 280px;
+            filter: blur(150px)
+        }
+    }
+    &-content {
+        margin-top: 55px;
+        color: $white;
+        text-transform: uppercase;
+        font-family: $font-2;
+        &-title {
+            .title1 {
+                @include font-150;
+                font-weight: 400;
+                line-height: 160px;
+                font-family: $font-2;
+                @include xl {
+                    padding: 0
+                }
+            }
+            .title2 {
+                @include font-150;
+                font-weight: 400;
+                line-height: 160px;
+                text-align: end;
+                margin-right: 185px;
+                @include xl {
+                    text-align: start;
+                    padding: 0;
+                    margin-top: -50px;
+                }
+                @include lg {
+                    text-align: start;
+                    padding: 0;
+                    margin-top: -60px;
+                }
+                @include md {
+                    margin-left: 0;
+                    margin-top: -100px;
+                    text-align: start;
+                }
+                @include sm {
+                    margin-left: 0;
+                    padding: 0;
+                    margin-top: -100px;
+                    text-align: start;
+                }
+            }
+        }
+        p {
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 35px;
+            font-family: $font-1;
+            margin-top: 53px;
+            margin-left: 140px;
+            @include xxl {
+                margin-left: 30px;
+            }
+            @include xl {
+                margin-left: 0;
+                margin-top: -20px;
+            }
+            @include lg {
+                margin-left: 0;
+                margin-top: -20px;
+                font-size: 18px;
+            }
+            @include md {
+                margin-left: 0;
+                margin-top: -20px;
+                font-size: 16px;
+                line-height: 28px;
+                padding: 5px;
+            }
+            @include sm {
+                margin-left: 0;
+                margin-top: -20px;
+                font-size: 14px;
+                line-height: 28px;
+            }
+        }
+    }
+    .image {
+        width: 840px;
+        height: 786px;
+        @include xxl {
+            width: 600px;
+            height: auto;
+        }
+        @include xl {
+            width: 600px;
+            height: auto;
+        }
+        @include lg {
+            width: 500px;
+            height: auto;
+        }
+        @include md {
+            width: 400px;
+            height: auto;
+            object-fit: contain;
+        }
+        @include sm {
+            width: 350px;
+            object-fit: contain;
+        }
+        & img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+}

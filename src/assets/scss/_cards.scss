@@ -1,0 +1,125 @@
+.cards {
+    margin-top: 200px;
+    & .container {
+        @media only screen and (min-width: 1700px) {
+            max-width: 1650px
+        }
+    }
+    &-content {
+        text-align: center;
+        padding: 126px 28px;
+        background-color: rgba($color: $border, $alpha: .08);
+        ;
+        border-right: 1px solid black;
+        min-height: 493px;
+        overflow: hidden;
+        @include xl {
+            padding: 80px 20px;
+            min-height: 480px;
+        }
+        @include lg {
+            padding: 60px 20px;
+            min-height: 440px;
+        }
+        @include md {
+            padding: 40px 20px;
+            min-height: 400px;
+        }
+        & .title {
+            font-size: 25px;
+            font-weight: 400;
+            line-height: 40px;
+            color: $text;
+            letter-spacing: 1px;
+            font-family: $font-2;
+            margin-bottom: 16px;
+            transition: .5s;
+            @include xl {
+                font-size: 22px;
+            }
+            @include lg {
+                font-size: 18px;
+            }
+            @include md {
+                font-size: 16px;
+            }
+        }
+        & p {
+            font-size: 16px;
+            font-family: $font-1;
+            font-weight: 400;
+            color: $text;
+            @include xl {
+                font-size: 14px;
+            }
+            @include lg {
+                font-size: 12px;
+            }
+            @include lg {
+                font-size: 10px;
+            }
+        }
+        .image {
+            width: 146px;
+            height: 146px;
+            border: 30px solid #7C2DF6;
+            border-radius: 50%;
+            text-align: end;
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            @include xl {
+                width: 130px;
+                height: 130px;
+            }
+            @include lg {
+                width: 120px;
+                height: 120px;
+            }
+            @include md {
+                width: 100px;
+                height: 100px;
+            }
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        &:hover,
+        &.active {
+            text-align: start;
+            padding: 60px 50px 0 50px;
+            overflow: hidden;
+            border: 1px solid $border;
+            transform: scale(1.1);
+            border-radius: 12px;
+            background-color: $border;
+            transition: all .3s ease-in-out;
+            @include xxl {
+                padding: 20px;
+            }
+            @include xl {
+                padding: 20px;
+            }
+            @include lg {
+                padding: 20px;
+            }
+            @include md {
+                padding: 20px;
+            }
+            & .title {
+                color: $white;
+            }
+            & p {
+                color: $white;
+            }
+            & .image {
+                display: block;
+                padding-bottom: 0;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
